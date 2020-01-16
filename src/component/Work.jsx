@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/Work.css';
 
 class Work extends React.Component {
     render() {

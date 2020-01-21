@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home.jsx';
 import About from './About.jsx';
+import Work from './Work.jsx'
 
 class NavBar extends React.Component {
     render() {
@@ -14,6 +15,7 @@ class NavBar extends React.Component {
                 </ul>    
                 <Home />
                 <About />
+                <Work />
             </div> 
         );
     }

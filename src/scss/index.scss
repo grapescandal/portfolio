@@ -164,7 +164,80 @@ body {
 }
 
 .about-padding {
-	padding: 0 10px;
+	padding: 0 20px;
+}
+
+.step-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.steps {
+	display: flex;
+	justify-content: space-between;
+	width: 200px;
+}
+.step {
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border: 2px solid #ACACA6;
+	border-radius: 50%;
+	z-index: 2;
+}
+.step.selected {
+	border: 2px solid #000000;   
+}
+.step.completed {
+	border: 2px solid #000000;
+	background: #000000; 
+}
+.step-progress {	
+	position: absolute;
+	margin: 0 0;
+	width: 100%;
+	height: 50%;
+	border-bottom: 2px solid #ACACA6;
+	z-index: 1;
+}
+
+.container-np {
+    width: 100%;
+	padding-right: 80px;
+	padding-left: 80px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#works-container {
+	padding-top: 6rem;
+}
+
+.work-card {
+	box-shadow: 0px 20px 20px 10px rgba(0, 0, 0, 0.2);
+	height: 600px;
+	margin-bottom: 50px;
+}
+
+.h-45 {
+	height: 45% !important;
+}
+
+.h-55 {
+	height: 55% !important;
+}
+
+.col-3-5 {
+	-ms-flex: 0 0 30%;
+	flex: 0 0 30%;
+	max-width: 30%;
+}
+
+.img-card {
+	width: 100%;
+	height: 100%;
 }
 
 @media screen and (min-width: 601px) {

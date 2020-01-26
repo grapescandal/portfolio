@@ -4,9 +4,9 @@ import SteppedProgress from './steppedprogressbar.jsx'
 class About extends React.Component {
     render() {
         return (
-            <div id="about-container" className="container text-center mt-5">
-                <h1>About</h1>
-                <div id="about-content-container" className="row mt-5">
+            <div id="about-container" className="container text-center mt-6 pb-5">
+                <h1>About me</h1>
+                <div id="about-content-container" className="row mt-6">
                      <div className="col">
                         <div className="row h-100">
                             <div className="col-6">

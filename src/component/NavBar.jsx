@@ -1,7 +1,8 @@
 import React from 'react';
 import Home from './Home.jsx';
 import About from './About.jsx';
-import Work from './Work.jsx'
+import Work from './Work.jsx';
+import Contact from './Contact.jsx';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -9,6 +10,7 @@ class NavBar extends React.Component {
         this.home = React.createRef();
         this.about = React.createRef();
         this.work = React.createRef();
+        this.contact = React.createRef();
 
         this.scrolling = this.scrolling.bind(this);
     }
@@ -17,8 +19,8 @@ class NavBar extends React.Component {
         console.log(instance);
         let node = document.getElementById(instance.current.props.id);
         window.scrollTo({
-           top: node.offsetTop,
-           behavior: "smooth" 
+            top: node.offsetTop,
+            behavior: "smooth"
         });
     }
 
@@ -26,23 +28,34 @@ class NavBar extends React.Component {
         return (
             <div>
                 <div id="topnav-right" className="navbar">
-                    <a onClick={() => {
-                        this.scrolling(this.home);
-                    }}>Home
+                    <div className="nav-button">
+                        <a onClick={() => {
+                            this.scrolling(this.home);
+                        }}>Home
+                        </a>
+                    </div>
+                    <div className="nav-button">
+                        <a onClick={() => {
+                            this.scrolling(this.about);
+                        }}>About
                     </a>
-                    <a onClick={() => {
-                        this.scrolling(this.about);
-                    }}>About
-                    </a>
-                    <a onClick={() => {
-                        this.scrolling(this.work);
-                    }}>Work</a>
-                    <a>Contact</a>  
-                </div>    
-                <Home ref={this.home} id="home"/>
-                <About ref={this.about} id="about-container"/>
-                <Work ref={this.work} id="work"/>
-            </div> 
+                    </div>
+                    <div className="nav-button">
+                        <a onClick={() => {
+                            this.scrolling(this.work);
+                        }}>Work</a>
+                    </div>
+                    <div className="nav-button">
+                        <a onClick={() => {
+                            this.scrolling(this.contact);
+                        }}>Contact</a>
+                    </div>
+                </div>
+                <Home ref={this.home} id="home" />
+                <About ref={this.about} id="about-container" />
+                <Work ref={this.work} id="work" />
+                <Contact ref={this.contact} id="contact" />
+            </div>
         );
     }
 }

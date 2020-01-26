@@ -10,7 +10,7 @@ class Work extends React.Component {
     render() {
         return (
             <div id="work" className="bg-light">
-                <div id="work-container" className="text-center pt-6 pb-5">
+                <div id="work-container" className="text-center pt-6 pb-6">
                     <h1>Works</h1>
                     <div className="row mt-6">
                         <div className="col">

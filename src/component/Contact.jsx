@@ -1,5 +1,6 @@
 import React from 'react';
 import mail from '../resources/Icons/gmail.png'
+import github from '../resources/Icons/github.png'
 import facebook from '../resources/Icons/facebook.png'
 import phone from '../resources/Icons/phone.png'
 import pin from '../resources/Icons/pin.png'
@@ -16,6 +17,10 @@ class Contact extends React.Component {
                                 <div className="col">
                                     <img src={mail} className="icon-big img-fluid" alt="mail"></img>
                                     <p className="mt-4">Divinetrees@gmail.com</p>
+                                </div>
+                                <div className="col">
+                                    <img src={github} className="icon-big img-fluid" alt="github"></img>
+                                    <p className="mt-4">github.com/grapescandal</p>
                                 </div>
                                 <div className="col">
                                     <img src={facebook} className="icon-big img-fluid" alt="facebook"></img>

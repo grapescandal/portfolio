@@ -281,7 +281,7 @@ body {
   color: white;
   text-align: center;
   width: 80px;
-  padding: 15px 0px;
+  padding: 7px 0px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -448,50 +448,50 @@ body {
 }
 
 .icon-big {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 80px;
+  max-height: 80px;
 }
 
 @keyframes bg {
   0% {
-      background-size:    0 3px,
-                          3px 0,
-                          0 3px,
-                          3px 0;
+      background-size:    0 2px,
+                          2px 0,
+                          0 2px,
+                          2px 0;
   }
   25% {
-      background-size:    100% 3px,
-                          3px 0,
-                          0 3px,
-                          3px 0;
+      background-size:    100% 2px,
+                          2px 0,
+                          0 2px,
+                          2px 0;
   }
   50% {
-      background-size:    100% 3px,
-                          3px 100%,
-                          0 3px,
-                          3px 0;
+      background-size:    100% 2px,
+                          2px 100%,
+                          0 2px,
+                          2px 0;
   }
   75% {
-      background-size:    100% 3px,
-                          3px 100%,
-                          100% 3px,
-                          3px 0;
+      background-size:    100% 2px,
+                          2px 100%,
+                          100% 2px,
+                          2px 0;
   }
   100% {
-      background-size:    100% 3px,
-                          3px 100%,
-                          100% 3px,
-                          3px 100%;
+      background-size:    100% 2px,
+                          2px 100%,
+                          100% 2px,
+                          2px 100%;
   }
 }
 
 .nav-button {
   cursor: pointer;
   background-repeat: no-repeat;
-  background-size:    100% 3px,
-                      3px 100%,
-                      100% 3px,
-                      3px 100%;
+  background-size:    100% 2px,
+                      2px 100%,
+                      100% 2px,
+                      2px 100%;
   background-position:    0 0,
                           100% 0,
                           100% 100%,
@@ -504,7 +504,7 @@ body {
   linear-gradient(to bottom, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%),
   linear-gradient(to right, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%),
   linear-gradient(to bottom, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%);
-  animation: bg 0.5s cubic-bezier(0.19, 1, 0.22, 1) 1;
+  animation: bg 0.25s cubic-bezier(0.19, 1, 0.22, 1) 1;
 }
 
 @media screen and (min-width: 601px) {

@@ -1,5 +1,6 @@
 import React from 'react';
 import SteppedProgress from './steppedprogressbar.jsx'
+import me from '../resources/Me/me.jpg'
 
 class About extends React.Component {
     render() {
@@ -9,10 +10,10 @@ class About extends React.Component {
                 <div id="about-content-container" className="row mt-6">
                      <div className="col">
                         <div className="row h-100">
-                            <div className="col-6">
+                            <div className="col-6 h-100">
                                 <div className="row align-items-center h-100">
                                     <div className="col">
-                                        <p>Image</p>
+                                        <img id="my-picture" src={me} alt="me"></img>
                                     </div>
                                 </div>
                             </div>

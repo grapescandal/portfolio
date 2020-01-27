@@ -334,7 +334,7 @@ body {
 
 #about-content-container > div {
   border: 2px solid black;
-  margin: 30px;
+  margin: 3%;
 }
 
 .about-profile {
@@ -343,6 +343,13 @@ body {
 
 .about-padding {
   padding: 0 20px;
+}
+
+#my-picture {
+  max-width: 70%;
+  max-height: 70%;
+  height: auto;
+  width: auto;
 }
 
 .step-container {

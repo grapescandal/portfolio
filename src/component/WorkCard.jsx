@@ -11,8 +11,8 @@ class WorkCard extends React.Component {
                 </div>
                 <div className="row h-25">
                     <div className="col ">
-                        <div className="row h-100 align-content-center">
-                            <div className="col text-center">
+                        <div className="row h-100 align-items-center">
+                            <div className="col">
                                 <h2>{this.props.imgName}</h2>
                             </div>
                         </div>

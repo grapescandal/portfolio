@@ -5,7 +5,6 @@ class WorkCard extends React.Component {
 
     removeSpace(text) {
         if(text === undefined) return;
-        console.log(text);
         const replaceString = require('replace-string');
         text = replaceString(text, ' ', '');
         return text;
@@ -31,7 +30,7 @@ class WorkCard extends React.Component {
                         </div>                                  
                     </div>
                 </div>
-                <Modal title={title} idName={this.removeSpace(title)} image1={this.props.sprite}></Modal>
+                <Modal title={title} idName={this.removeSpace(title)} images={this.props.images}></Modal>
             </React.Fragment>
         );
     }        

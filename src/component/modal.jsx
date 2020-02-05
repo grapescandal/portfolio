@@ -2,22 +2,26 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 
 class Modal extends React.Component {
-
     render() {
         const idName = this.props.idName;
         const title = this.props.title;
+        const pics = this.props.images;
         const images = [
             {
-                original: this.props.image1,
-                thumbnail: this.props.image1,
+                original: pics[0],
+                thumbnail: pics[0],
             },
             {
-                original: this.props.image1,
-                thumbnail: this.props.image1,
+                original: pics[1],
+                thumbnail: pics[1],
             },
             {
-                original: this.props.image1,
-                thumbnail: this.props.image1,
+                original: pics[2],
+                thumbnail: pics[2],
+            },
+            {
+                original: pics[3],
+                thumbnail: pics[3],
             },
         ];
         return (

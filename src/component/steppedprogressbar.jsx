@@ -11,7 +11,7 @@ class SteppedProgress extends React.Component {
         let c = current;
         let steps = [];
         for (let i=0; i<t; i++) {
-            steps.push(<div class={`step${i < c ? " completed": ""}`} id={i}></div>);
+            steps.push(<div className={`step${i < c ? " completed": ""}`} id={i}></div>);
         }
 
         // steps[c - 1] = <div class={`step selected`} id={c - 1}></div>
@@ -26,11 +26,11 @@ class SteppedProgress extends React.Component {
             z-index: 1;
         `;
         return (
-            <div class="step-container">
-                <div class="step-progress">
+            <div className="step-container">
+                <div className="step-progress">
                     <Percentage></Percentage>
                 </div>
-                <div class="steps">
+                <div className="steps">
                     { this.makeSteps(this.props.currentProgress, this.props.totalProgress) }  
                 </div>
             </div>

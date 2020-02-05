@@ -8,8 +8,8 @@ import kiki from '../resources/Kiki The Sacrifice/KiKiTheSacrifice.jpg'
 
 class Work extends React.Component {
     render() {
-        return (
-            <div id="work" className="bg-light">
+        return(         
+            <div id="work" className="bg-light">  
                 <div id="work-container" className="text-center pt-6 pb-6">
                     <h1>Works</h1>
                     <div className="row mt-6">
@@ -28,7 +28,7 @@ class Work extends React.Component {
                     </div>
                 </div>
             </div>
-        );
+          );  
     }
 }
 

@@ -24,7 +24,7 @@ class Contact extends React.Component {
                                 </div>
                                 <div className="col">
                                     <img src={facebook} className="icon-big img-fluid" alt="facebook"></img>
-                                    <p className="mt-4">Jirachai Kongjinda</p>
+                                    <p className="mt-4">Jirachai G. Kongjinda</p>
                                 </div>
                                 <div className="col">
                                     <img src={phone} className="icon-big img-fluid" alt="phone"></img>

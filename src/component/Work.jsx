@@ -31,34 +31,119 @@ import madCockShooter2 from '../resources/MADCockShooter/MADCockShooter2.jpg'
 import madCockShooter3 from '../resources/MADCockShooter/MADCockShooter3.jpg'
 import madCockShooter4 from '../resources/MADCockShooter/MADCockShooter4.jpg'
 
+import Modal from './modal.jsx';
+
 class Work extends React.Component {
+    constructor(props) {
+        super(props);
+        this.modal = React.createRef();
+        this.state = {
+            currentData: null
+        };
+    }
+
+    setData(data) {
+        this.setState({currentData: data});
+    }
+
     render() {
-        const magneticaImages = [magnetica1,magnetica2,magnetica3,magnetica4];
-        const paperRacingImages = [paperRacing1,paperRacing2,paperRacing3,paperRacing4];
-        const paramonyImages = [paramony1,paramony2,paramony3,paramony4];
-        const kikiImages = [kiki1,kiki2,kiki3,kiki4];
-        const madCockShooterImages = [madCockShooter1,madCockShooter2,madCockShooter3,madCockShooter4];
-        return(         
-            <div id="work" className="bg-light">  
+
+        const magneticaData = {
+            title: "Magnetica",
+            sprite: magnetica,
+            images: [magnetica1, magnetica2, magnetica3, magnetica4],
+        };
+
+        const paperRacingData = {
+            title: "Paper Racing",
+            sprite: paperRacing,
+            images: [paperRacing1, paperRacing2, paperRacing3, paperRacing4],
+        };
+
+
+        const paramonyData = {
+            title: "Paramony",
+            sprite: paramony,
+            images: [paramony1, paramony2, paramony3, paramony4],
+        };
+
+        const kikiData = {
+            title: "Kiki - The Sacrifice",
+            sprite: kiki,
+            images: [kiki1, kiki2, kiki3, kiki4],
+        };
+
+        const madCockShooterData = {
+            title: "MAD Cock Shooter",
+            sprite: madCockShooter,
+            images: [madCockShooter1, madCockShooter2, madCockShooter3, madCockShooter4],
+        };
+
+        return (
+            <div id="work" className="bg-light">
                 <div id="work-container" className="text-center pt-6 pb-6">
                     <h1>Works</h1>
                     <div className="row mt-6">
                         <div className="col">
-                            <div className="row justify-content-around no-gutters">
-                                <WorkCard sprite={magnetica} imgName={"Magnetica"} images={magneticaImages}></WorkCard>
-                                <WorkCard sprite={paperRacing} imgName={"Paper Racing"} images={paperRacingImages}></WorkCard>
-                                <WorkCard sprite={paramony} imgName={"Paramony"} images={paramonyImages}></WorkCard>
+                            <div className="row justify-content-around">
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard data={magneticaData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
+
+                                <div className="w-100 d-none"></div>
+
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard data={paperRacingData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
+
+                                <div className="w-100 d-none"></div>
+
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard data={paramonyData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
+
+                                <div className="w-100"></div>
+
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard data={kikiData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
+
+                                <div className="w-100 d-none"></div>
+
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard data={madCockShooterData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="row justify-content-around no-gutters mt-5">
-                                <WorkCard sprite={kiki} imgName={"KiKi - The Sacrifice"} images={kikiImages}></WorkCard>
-                                <WorkCard sprite={madCockShooter} imgName={"MAD Cock Shooter"} images={madCockShooterImages}></WorkCard>
-                                {/* <WorkCard ></WorkCard> */}
-                            </div>
+
+                            <Modal ref={this.modal} data={this.state.currentData}></Modal>
+
                         </div>
+
+                        {/* <WorkCard ></WorkCard> */}
                     </div>
                 </div>
-            </div>
-          );  
+            </div >
+        );
     }
 }
 

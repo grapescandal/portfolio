@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 
 class SteppedProgress extends React.Component {
     constructor(props) {
@@ -10,25 +9,46 @@ class SteppedProgress extends React.Component {
         let t = total;
         let c = current;
         let steps = [];
-        for (let i=0; i<t; i++) {
-            steps.push(<div className={`step${i < c ? " completed": ""}`} id={i}></div>);
+        for (let i=0; i<t; i++) { 
+            steps.push(<div key={i.toString()} className={`step ${i < c ? "completed": ""}`} id={i}></div>);    
         }
 
-        // steps[c - 1] = <div class={`step selected`} id={c - 1}></div>
         return steps;
     }
 
+    makeProgress() {
+        let level = "";
+
+        switch(this.state.percentage) {
+            case 0:
+                level = "beginner";
+                break;
+            case 25:
+                level = "novice";
+                break;
+            case 50:
+                level = "expert";
+                break;
+            case 75:
+                level = "intermediate";
+                break;
+            case 100:
+                level = "advance";
+                break;
+            default:
+                break;            
+        }
+
+        let bar = <div className={`step-progress-front ${level}`}></div>;
+
+        return bar;
+    }
+
     render() {
-        const Percentage = styled.div`
-            width: ${this.state.percentage}%;
-            height: 120%;           
-            border-bottom: 2px solid #000000;
-            z-index: 1;
-        `;
         return (
             <div className="step-container">
                 <div className="step-progress">
-                    <Percentage></Percentage>
+                    { this.makeProgress() }
                 </div>
                 <div className="steps">
                     { this.makeSteps(this.props.currentProgress, this.props.totalProgress) }  

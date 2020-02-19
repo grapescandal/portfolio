@@ -468,7 +468,7 @@ body {
 
 .work-card {
   box-shadow: 0px 15px 20px -8px rgba(0, 0, 0, 0.1);
-  height: 400px;
+  height: 100%;
   width: 100%;
   margin-bottom: 50px;
 }
@@ -502,6 +502,10 @@ body {
 .work-card:nth-of-type(1n+0) {
   transform: scale(1, 1);
   transition: all 0.3s;
+}
+
+.work-card h2 {
+  font-size: 2rem;
 }
 
 .pt-6 {
@@ -649,6 +653,12 @@ button.closeButton {
   }
 }
 
+@media (min-width: 1200px) {
+  .work-card h2 {
+    font-size: 1.5vw;
+  }
+}
+
 /* If the screen size is 600px wide or less*/
 @media screen and (max-width: 600px) {
   html {
@@ -675,6 +685,5 @@ button.closeButton {
 
   #navbar-container .row {
     justify-content: space-evenly !important;
-    
   }
 }

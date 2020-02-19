@@ -6,15 +6,15 @@ class WorkCard extends React.Component {
         return (
             <React.Fragment>              
                 <div className="work-card col pl-0 pr-0" data-toggle="modal" data-target="#WorkModal" onClick={()=>this.props.onClick(data)}>
-                    <div className="row h-75">
-                        <div className="col h-100">
+                    <div className="row">
+                        <div className="col">
                             <img src={data.sprite} className="img-card" alt={data.title}></img>
                         </div>
                     </div>
-                    <div className="row h-25">
-                        <div className="col h-100">
-                            <div className="row h-100 align-items-center">
-                                <div className="col">
+                    <div className="row">
+                        <div className="col">
+                            <div className="row align-items-center">
+                                <div className="col pt-4 pb-4">
                                     <h2>{data.title}</h2>
                                 </div>
                             </div>

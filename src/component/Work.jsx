@@ -31,7 +31,7 @@ import madCockShooter2 from '../resources/MADCockShooter/MADCockShooter2.jpg'
 import madCockShooter3 from '../resources/MADCockShooter/MADCockShooter3.jpg'
 import madCockShooter4 from '../resources/MADCockShooter/MADCockShooter4.jpg'
 
-import Modal from './modal.jsx';
+import Modal from './Modal.jsx';
 
 class Work extends React.Component {
     constructor(props) {
@@ -43,7 +43,7 @@ class Work extends React.Component {
     }
 
     setData(data) {
-        this.setState({currentData: data});
+        this.setState({ currentData: data });
     }
 
     render() {
@@ -52,12 +52,19 @@ class Work extends React.Component {
             title: "Magnetica",
             sprite: magnetica,
             images: [magnetica1, magnetica2, magnetica3, magnetica4],
+            descriptions: ["The competition between robots to get precious treasure from king of robots.",
+                "Multiplayer and puzzle game.",
+                "Networking by Unity UNet.",
+                "Play with 4 players per match."],
         };
 
         const paperRacingData = {
             title: "Paper Racing",
             sprite: paperRacing,
             images: [paperRacing1, paperRacing2, paperRacing3, paperRacing4],
+            descriptions: ["Made from paper car game, 2 players blow thier cars to see who can go farther.",
+                "Use hardware to get input from breath and convert it to car's speed by Arduino.",
+                "Play to get highscore."],
         };
 
 
@@ -65,18 +72,30 @@ class Work extends React.Component {
             title: "Paramony",
             sprite: paramony,
             images: [paramony1, paramony2, paramony3, paramony4],
+            descriptions: ["Story of the last knight of Melodia that must help princess from enemy for restoring thier kingdom.",
+                "Amazing battle system.",
+                "Side scrolling adventure game.",
+                "Graphic for kids."],
         };
 
         const kikiData = {
             title: "Kiki - The Sacrifice",
             sprite: kiki,
             images: [kiki1, kiki2, kiki3, kiki4],
+            descriptions: ["KiKi is a sacrifice of ancient rituals but he don't want to, so keep running KiKi!!",
+                "Global game jam 2016 project.",
+                "Made by phaser.io",
+                "Endless runner games"]
         };
 
         const madCockShooterData = {
             title: "MAD Cock Shooter",
             sprite: madCockShooter,
             images: [madCockShooter1, madCockShooter2, madCockShooter3, madCockShooter4],
+            descriptions: ["Play as chicken with gun, kill other player to be last chicken of the game.",
+                "Battle royale multiplayer game",
+                "Networking by Unity UNet", "Play with 10 player per match.",
+                "Use items and skill to annoy other player."]
         };
 
         return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import SteppedProgress from './steppedprogressbar.jsx'
+import SteppedProgress from './Steppedprogressbar.jsx'
 import me from '../resources/Me/me.jpg'
 
 class About extends React.Component {

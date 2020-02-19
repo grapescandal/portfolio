@@ -7,10 +7,19 @@ class Modal extends React.Component {
         let title = null;
         let pics = null;
         let images = null;
+        let listOfDescriptions = null;
 
         if (data != null) {
             title = data.title;
             pics = data.images;
+
+            let descriptionsProp = data.descriptions;
+            listOfDescriptions = descriptionsProp.map((description, index) =>
+                <li key={index}>
+                    {description}
+                </li>
+            );
+
             images = [
                 {
                     original: pics[0],
@@ -31,16 +40,19 @@ class Modal extends React.Component {
             ];
         }
 
-
         return (
             <div className="modal fade" id="WorkModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div className="modal-dialog" role="document">
                     {data != null ?
                         <div className="modal-content modalBody">
-                            <div className="modal-header">
-                                <h5 className="modal-title" id="exampleModalLabel">{title}</h5>
-                                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
+                            <div className="modal-header justify-content-center">
+                                <div className="row w-100">
+                                    <div className="col-xl-12">
+                                        <h5 className="modal-title" id="exampleModalLabel">{title}</h5>
+                                    </div>
+                                </div>  
+                                <button type="button" className="closeButton" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
                             <div className="modal-body">
@@ -53,9 +65,9 @@ class Modal extends React.Component {
                                                 </div>
                                             </div>
                                             <div className="row h-25">
-                                                <div className="col pt-1">
-                                                    Description here.
-                                            </div>
+                                                <div className="col pt-1 text-left">
+                                                    <ul>{listOfDescriptions}</ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

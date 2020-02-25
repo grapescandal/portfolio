@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class WorkCard extends React.Component {
     render() {
         const data = this.props.data;
         return (
             <React.Fragment>              
-                <div className="work-card col pl-0 pr-0" data-toggle="modal" data-target="#WorkModal" onClick={()=>this.props.onClick(data)}>
+                <div className={"work-card col pl-0 pr-0 " + this.props.animated} data-toggle="modal" data-target="#WorkModal" onClick={()=>this.props.onClick(data)}>
                     <div className="row">
                         <div className="col">
                             <img src={data.sprite} className="img-card" alt={data.title}></img>
@@ -24,6 +25,10 @@ class WorkCard extends React.Component {
             </React.Fragment>
         );
     }        
+}
+
+WorkCard.protoTypes = {
+    animated: PropTypes.string
 }
 
 export default WorkCard;

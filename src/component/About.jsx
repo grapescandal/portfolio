@@ -2,12 +2,17 @@ import React from 'react';
 import SteppedProgress from './Steppedprogressbar.jsx'
 import me from '../resources/Me/me.jpg'
 
+import WOW from 'wowjs'
+
 class About extends React.Component {
+    componentDidMount() {
+        new WOW.WOW().init();
+    }
     render() {
         return (
             <div id="about-container" className="container text-center pt-6 pb-6">
                 <h1>About me</h1>
-                <div id="about-content-container" className="row mt-6">
+                <div id="about-content-container" className="row mt-6 wow tada">
                      <div className="col h-100">
                         <div className="row h-100">
                             <div className="col-6">

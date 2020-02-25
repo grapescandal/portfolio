@@ -32,6 +32,7 @@ import madCockShooter3 from '../resources/MADCockShooter/MADCockShooter3.jpg'
 import madCockShooter4 from '../resources/MADCockShooter/MADCockShooter4.jpg'
 
 import Modal from './Modal.jsx';
+import WOW from 'wowjs';
 
 class Work extends React.Component {
     constructor(props) {
@@ -40,6 +41,10 @@ class Work extends React.Component {
         this.state = {
             currentData: null
         };
+    }
+
+    componentDidMount() {
+        new WOW.WOW().init();
     }
 
     setData(data) {
@@ -66,7 +71,6 @@ class Work extends React.Component {
                 "Use hardware to get input from breath and convert it to car's speed by Arduino.",
                 "Play to get highscore."],
         };
-
 
         const paramonyData = {
             title: "Paramony",
@@ -101,13 +105,13 @@ class Work extends React.Component {
         return (
             <div id="work" className="bg-light">
                 <div id="work-container" className="text-center pt-6 pb-6">
-                    <h1>Works</h1>
+                    <h1 className="wow bounceInDown">Works</h1>
                     <div className="row mt-6">
                         <div className="col">
                             <div className="row justify-content-around">
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard data={magneticaData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={magneticaData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -117,7 +121,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard data={paperRacingData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={paperRacingData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -127,7 +131,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard data={paramonyData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={paramonyData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -137,7 +141,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard data={kikiData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={kikiData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -147,7 +151,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard data={madCockShooterData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={madCockShooterData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>

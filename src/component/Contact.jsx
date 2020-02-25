@@ -5,11 +5,17 @@ import facebook from '../resources/Icons/facebook.png'
 import phone from '../resources/Icons/phone.png'
 import pin from '../resources/Icons/pin.png'
 
+import WOW from 'wowjs';
+
 class Contact extends React.Component {
+    componentDidMount() {
+        new WOW.WOW().init();
+    }
+
     render() {
         return (
             <div id="contact">
-                <div id="contact-container" className="text-center pt-6 pb-6">
+                <div id="contact-container" className="text-center pt-6 pb-6 wow fadeInLeft">
                     <h1>Contact</h1>
                     <div className="row mt-5">
                         <div className="col">

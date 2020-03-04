@@ -560,15 +560,13 @@ body {
 .modalBody {
   max-width: 700px;
   max-height: 700px;
-  height: 100vh;
-  width: 100vw;
 }
 
 .closeButton {
   float: right;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 1;
+  line-height: 0.5;
   color: #000;
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
@@ -578,6 +576,10 @@ body {
   position: absolute;
   padding: 0 1rem;
   right: 0px;
+}
+
+ul.description {
+  padding: 0px 20px 20px 20px;
 }
 
 button.closeButton {
@@ -631,26 +633,22 @@ button.closeButton {
   }
 }
 
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: 700px;
-    margin: 8rem auto;
-  }
-  .modal-dialog-scrollable {
-    max-height: calc(100% - 3.5rem);
-  }
-  .modal-dialog-scrollable .modal-content {
-    max-height: calc(100vh - 3.5rem);
-  }
-  .modal-dialog-centered {
-    min-height: calc(100% - 3.5rem);
-  }
-  .modal-dialog-centered::before {
-    height: calc(100vh - 3.5rem);
-  }
-  .modal-sm {
-    max-width: 300px;
-  }
+.modal-dialog {
+  margin: 10rem auto;
+  max-width: 50em;
+  max-height: 50em;
+}
+.modal-dialog-scrollable {
+  max-height: calc(100% - 3.5rem);
+}
+.modal-dialog-scrollable .modal-content {
+  max-height: calc(100vh - 3.5rem);
+}
+.modal-dialog-centered {
+  min-height: calc(100% - 3.5rem);
+}
+.modal-dialog-centered::before {
+  height: calc(100vh - 3.5rem);
 }
 
 @media (min-width: 1200px) {
@@ -674,16 +672,27 @@ button.closeButton {
     letter-spacing: 2px;
   }
 
-  .modal-dialog {
-    width: 100%;
-    margin: 30px auto;
-  }
-
   #navbar-container {
     padding: 10px 10px;
   }
 
   #navbar-container .row {
     justify-content: space-evenly !important;
+  }
+
+  .closeButton {
+    float: right;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 0.5;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+  }
+  
+  .modal-header .closeButton {
+    position: absolute;
+    padding: 0 1rem;
+    right: 0px;
   }
 }

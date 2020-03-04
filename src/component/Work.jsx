@@ -107,6 +107,7 @@ class Work extends React.Component {
                 <div id="work-container" className="text-center pt-6 pb-6">
                     <h1 className="wow bounceInDown">Works</h1>
                     <div className="row mt-6">
+                        
                         <div className="col">
                             <div className="row justify-content-around">
                                 <div className="col-xl-3 col-sm-8">

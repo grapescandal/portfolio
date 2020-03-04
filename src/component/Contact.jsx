@@ -15,10 +15,10 @@ class Contact extends React.Component {
     render() {
         return (
             <div id="contact">
-                <div id="contact-container" className="text-center pt-6 pb-6 wow fadeInLeft">
+                <div id="contact-container" className="text-center pt-6 pb-6">
                     <h1>Contact</h1>
                     <div className="row mt-5">
-                        <div className="col">
+                        <div className="col wow fadeInLeft">
                             <div className="row justify-content-center">
                                 <div className="col-xl-2 col-sm-8">
                                     <img src={mail} className="icon-big img-fluid" alt="mail"></img>

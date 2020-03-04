@@ -59,14 +59,14 @@ class Modal extends React.Component {
                                 <div className="container h-100">
                                     <div className="row h-100">
                                         <div className="col">
-                                            <div className="row h-75">
+                                            <div className="row h-80">
                                                 <div className="col">
-                                                    <ImageGallery items={images} />
+                                                    <ImageGallery items={images} showFullscreenButton={false} showPlayButton={false}/>
                                                 </div>
                                             </div>
-                                            <div className="row h-25">
+                                            <div className="row h-20 mt-3">
                                                 <div className="col pt-1 text-left">
-                                                    <ul>{listOfDescriptions}</ul>
+                                                    <ul className="description">{listOfDescriptions}</ul>
                                                 </div>
                                             </div>
                                         </div>

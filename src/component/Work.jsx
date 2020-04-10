@@ -1,6 +1,12 @@
 import React from 'react';
 import WorkCard from './WorkCard.jsx';
 
+import madWeb from '../resources/MADWeb/MADWeb.jpg'
+import madWeb1 from '../resources/MADWeb/MADWeb1.jpg'
+import madWeb2 from '../resources/MADWeb/MADWeb2.jpg'
+import madWeb3 from '../resources/MADWeb/MADWeb3.jpg'
+import madWeb4 from '../resources/MADWeb/MADWeb4.jpg'
+
 import magnetica from '../resources/Magnetica/Magnetica.jpg'
 import magnetica1 from '../resources/Magnetica/Magnetica1.jpg'
 import magnetica2 from '../resources/Magnetica/Magnetica2.jpg'
@@ -25,11 +31,11 @@ import kiki2 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice2.jpg'
 import kiki3 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice3.jpg'
 import kiki4 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice4.jpg'
 
-import madCockShooter from '../resources/MADCockShooter/MADCockShooter.jpg'
-import madCockShooter1 from '../resources/MADCockShooter/MADCockShooter1.jpg'
-import madCockShooter2 from '../resources/MADCockShooter/MADCockShooter2.jpg'
-import madCockShooter3 from '../resources/MADCockShooter/MADCockShooter3.jpg'
-import madCockShooter4 from '../resources/MADCockShooter/MADCockShooter4.jpg'
+import punica from '../resources/Punica/Punica.jpg'
+import punica1 from '../resources/Punica/Punica1.jpg'
+import punica2 from '../resources/Punica/Punica2.jpg'
+import punica3 from '../resources/Punica/Punica3.jpg'
+import punica4 from '../resources/Punica/Punica4.jpg'
 
 import Modal from './Modal.jsx';
 import WOW from 'wowjs';
@@ -52,6 +58,16 @@ class Work extends React.Component {
     }
 
     render() {
+
+        const madWebData = {
+            title: "MAD VR Studio Website",
+            sprite: madWeb,
+            images: [madWeb1, madWeb2, madWeb3, madWeb4],
+            descriptions: ["360 degree web viewer.",
+                "Made by react.",
+                "Responsive design",
+                "www.madvrstudio.com"],
+        };
 
         const magneticaData = {
             title: "Magnetica",
@@ -92,14 +108,14 @@ class Work extends React.Component {
                 "Endless runner games"]
         };
 
-        const madCockShooterData = {
-            title: "MAD Cock Shooter",
-            sprite: madCockShooter,
-            images: [madCockShooter1, madCockShooter2, madCockShooter3, madCockShooter4],
-            descriptions: ["Play as chicken with gun, kill other player to be last chicken of the game.",
-                "Battle royale multiplayer game",
-                "Networking by Unity UNet", "Play with 10 player per match.",
-                "Use items and skill to annoy other player."]
+        const punicaData = {
+            title: "1880 Watson & Holmes",
+            sprite: punica,
+            images: [punica1, punica2, punica3, punica4],
+            descriptions: ["Puzzle and visual novel game.",
+                "Gachapon system.",
+                "Run on android mobile devices.",
+                "Use Go language to build server"]
         };
 
         return (
@@ -107,9 +123,18 @@ class Work extends React.Component {
                 <div id="work-container" className="text-center pt-6 pb-6">
                     <h1 className="wow bounceInDown">Works</h1>
                     <div className="row mt-6">
-                        
                         <div className="col">
                             <div className="row justify-content-around">
+                                <div className="col-xl-3 col-sm-8">
+                                    <div className="row justify-content-center">
+                                        <WorkCard animated={"wow fadeInUp"} data={madWebData} onClick={(data) => {
+                                            this.setData(data);
+                                        }}></WorkCard>
+                                    </div>
+                                </div>
+
+                                <div className="w-100 d-none"></div>
+
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
                                         <WorkCard animated={"wow fadeInUp"} data={magneticaData} onClick={(data) => {
@@ -128,7 +153,7 @@ class Work extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="w-100 d-none"></div>
+                                <div className="w-100 d"></div>
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
@@ -138,7 +163,7 @@ class Work extends React.Component {
                                     </div>
                                 </div>
 
-                                <div className="w-100"></div>
+                                <div className="w-100 d-none"></div>
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
@@ -152,7 +177,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard animated={"wow fadeInUp"} data={madCockShooterData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={punicaData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -162,8 +187,6 @@ class Work extends React.Component {
                             <Modal ref={this.modal} data={this.state.currentData}></Modal>
 
                         </div>
-
-                        {/* <WorkCard ></WorkCard> */}
                     </div>
                 </div>
             </div >

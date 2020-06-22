@@ -35,7 +35,7 @@ class About extends React.Component {
                                             </p>                                     
                                     </div>
                                 </div>
-                                <div className="row h-50">
+                                <div className="row h-50 py-xl-3 py-sm-4">
                                     <div className="col">
                                         <div className="row justify-content-center align-items-center">
                                             <div className="col-4"><p className="skill-level mb-0">Beginner</p></div> 

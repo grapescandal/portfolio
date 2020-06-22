@@ -19,17 +19,29 @@ import paperRacing2 from '../resources/Paper Racing/PaperRacing2.jpg'
 import paperRacing3 from '../resources/Paper Racing/PaperRacing3.jpg'
 import paperRacing4 from '../resources/Paper Racing/PaperRacing4.jpg'
 
-import paramony from '../resources/Paramony/Paramony.jpg'
-import paramony1 from '../resources/Paramony/Paramony1.jpg'
-import paramony2 from '../resources/Paramony/Paramony2.jpg'
-import paramony3 from '../resources/Paramony/Paramony3.jpg'
-import paramony4 from '../resources/Paramony/Paramony4.jpg'
+import threeConnect from '../resources/ThreeConnect/ThreeConnect.jpg'
+import threeConnect1 from '../resources/ThreeConnect/ThreeConnect1.jpg'
+import threeConnect2 from '../resources/ThreeConnect/ThreeConnect2.jpg'
+import threeConnect3 from '../resources/ThreeConnect/ThreeConnect3.jpg'
+import threeConnect4 from '../resources/ThreeConnect/ThreeConnect4.jpg'
 
-import kiki from '../resources/Kiki The Sacrifice/KiKiTheSacrifice.jpg'
-import kiki1 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice1.jpg'
-import kiki2 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice2.jpg'
-import kiki3 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice3.jpg'
-import kiki4 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice4.jpg'
+import emar from '../resources/EMAR/EMAR.jpg'
+import emar1 from '../resources/EMAR/EMAR1.jpg'
+import emar2 from '../resources/EMAR/EMAR2.jpg'
+import emar3 from '../resources/EMAR/EMAR3.jpg'
+import emar4 from '../resources/EMAR/EMAR4.jpg'
+
+// import paramony from '../resources/Paramony/Paramony.jpg'
+// import paramony1 from '../resources/Paramony/Paramony1.jpg'
+// import paramony2 from '../resources/Paramony/Paramony2.jpg'
+// import paramony3 from '../resources/Paramony/Paramony3.jpg'
+// import paramony4 from '../resources/Paramony/Paramony4.jpg'
+
+// import kiki from '../resources/Kiki The Sacrifice/KiKiTheSacrifice.jpg'
+// import kiki1 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice1.jpg'
+// import kiki2 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice2.jpg'
+// import kiki3 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice3.jpg'
+// import kiki4 from '../resources/Kiki The Sacrifice/KiKiTheSacrifice4.jpg'
 
 import punica from '../resources/Punica/Punica.jpg'
 import punica1 from '../resources/Punica/Punica1.jpg'
@@ -64,7 +76,7 @@ class Work extends React.Component {
             sprite: madWeb,
             images: [madWeb1, madWeb2, madWeb3, madWeb4],
             descriptions: ["360 degree web viewer.",
-                "Made by react.",
+                "Made by ReactJS.",
                 "Responsive design",
                 "www.madvrstudio.com"],
         };
@@ -88,24 +100,24 @@ class Work extends React.Component {
                 "Play to get highscore."],
         };
 
-        const paramonyData = {
-            title: "Paramony",
-            sprite: paramony,
-            images: [paramony1, paramony2, paramony3, paramony4],
-            descriptions: ["Story of the last knight of Melodia that must help princess from enemy for restoring thier kingdom.",
-                "Amazing battle system.",
-                "Side scrolling adventure game.",
-                "Graphic for kids."],
+        const threeConnectData = {
+            title: "3Connect Star Call",
+            sprite: threeConnect,
+            images: [threeConnect1, threeConnect2, threeConnect3, threeConnect4],
+            descriptions: ["What would happen if you can talk with your favorite actors who ready to call you every day?",
+                "Let's super star make phone call for you!",
+                "Run on iOS & Android.",
+                "Use Go language to build server"]
         };
 
-        const kikiData = {
-            title: "Kiki - The Sacrifice",
-            sprite: kiki,
-            images: [kiki1, kiki2, kiki3, kiki4],
-            descriptions: ["KiKi is a sacrifice of ancient rituals but he don't want to, so keep running KiKi!!",
-                "Global game jam 2016 project.",
-                "Made by phaser.io",
-                "Endless runner games"]
+        const emarData = {
+            title: "EM Augmeted Reality",
+            sprite: emar,
+            images: [emar1, emar2, emar3, emar4],
+            descriptions: ["Application for promote the promotions in the Emporium and the EmQuartier with Augmented Reality technology.",
+                "Use ARKit and ARCore.",
+                "Made by Unity.",
+                "You will get the best exclusive promotions for you."]
         };
 
         const punicaData = {
@@ -157,7 +169,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard animated={"wow fadeInUp"} data={paramonyData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={threeConnectData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>
@@ -167,7 +179,7 @@ class Work extends React.Component {
 
                                 <div className="col-xl-3 col-sm-8">
                                     <div className="row justify-content-center">
-                                        <WorkCard animated={"wow fadeInUp"} data={kikiData} onClick={(data) => {
+                                        <WorkCard animated={"wow fadeInUp"} data={emarData} onClick={(data) => {
                                             this.setData(data);
                                         }}></WorkCard>
                                     </div>

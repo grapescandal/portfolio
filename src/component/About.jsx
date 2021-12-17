@@ -12,7 +12,7 @@ class About extends React.Component {
         return (
             <div id="about-container" className="container text-center pt-6 pb-6">
                 <h1>About me</h1>
-                <div id="about-content-container" className="row mt-6 wow tada">
+                <div id="about-content-container" className="row mt-6">
                      <div className="col h-100">
                         <div className="row h-100">
                             <div className="col-6">
@@ -72,7 +72,7 @@ class About extends React.Component {
                                                 </div>  
                                                 <div className="row mt-3">
                                                     <div className="col skill-level text-right">React</div> 
-                                                    <div className="col-5"><SteppedProgress currentProgress={2} totalProgress={5}/></div>    
+                                                    <div className="col-5"><SteppedProgress currentProgress={3} totalProgress={5}/></div>    
                                                     <div className="col-3-5"></div>                              
                                                 </div>         
                                             </div>         

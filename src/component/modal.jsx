@@ -20,24 +20,16 @@ class Modal extends React.Component {
                 </li>
             );
 
-            images = [
-                {
-                    original: pics[0],
-                    thumbnail: pics[0],
-                },
-                {
-                    original: pics[1],
-                    thumbnail: pics[1],
-                },
-                {
-                    original: pics[2],
-                    thumbnail: pics[2],
-                },
-                {
-                    original: pics[3],
-                    thumbnail: pics[3],
-                },
-            ];
+            images = [];
+
+            for(var i = 0; i < pics.length; i++) {
+                images.push(
+                    {
+                        original: pics[i],
+                        thumbnail: pics[i],
+                    },
+                )
+            }           
         }
 
         return (

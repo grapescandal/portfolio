@@ -13,7 +13,7 @@
     "react-bootstrap": "^1.6.4",
     "react-dom": "^16.14.0",
     "react-image-gallery": "^1.2.7",
-    "react-scripts": "3.3.0",
+    "react-scripts": "5.0.1",
     "react-string-replace": "^0.4.4",
     "replace-string": "^3.1.0",
     "styled-components": "^5.3.3",
